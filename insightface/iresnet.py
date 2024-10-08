@@ -1,15 +1,21 @@
 import torch
 from torch import nn
-from torchvision.models.utils import load_state_dict_from_url
+# from torchvision.models.utils import load_state_dict_from_url
+from torch.hub import load_state_dict_from_url
 
 __all__ = ['iresnet34', 'iresnet50', 'iresnet100']
 
-model_urls = {
-    'iresnet34': 'https://sota.nizhib.ai/pytorch-insightface/iresnet34-5b0d0e90.pth',
-    'iresnet50': 'https://sota.nizhib.ai/pytorch-insightface/iresnet50-7f187506.pth',
-    'iresnet100': 'https://sota.nizhib.ai/pytorch-insightface/iresnet100-73e07ba7.pth'
-}
+# model_urls = {
+#     'iresnet34': 'https://sota.nizhib.ai/pytorch-insightface/iresnet34-5b0d0e90.pth',
+#     'iresnet50': 'https://sota.nizhib.ai/pytorch-insightface/iresnet50-7f187506.pth',
+#     'iresnet100': 'https://sota.nizhib.ai/pytorch-insightface/iresnet100-73e07ba7.pth'
+# }
 
+model_urls = {
+    'iresnet34': 'https://cdn.matix-media.net/dd/09944308',
+    'iresnet50': 'https://cdn.matix-media.net/dd/6fd38627',
+    'iresnet100': 'https://cdn.matix-media.net/dd/15963a78',
+}
 
 def conv3x3(in_planes, out_planes, stride=1, groups=1, dilation=1):
     """3x3 convolution with padding"""
